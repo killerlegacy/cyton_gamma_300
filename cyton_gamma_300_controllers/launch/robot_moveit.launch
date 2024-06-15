@@ -1,0 +1,8 @@
+<launch>
+
+  <!-- Run the python script to launch everything: dynamixel managers, controllers, moveit framework -->
+  <node name="robot_moveit_bringup" pkg="cyton_gamma_300_controllers" type="robot_moveit_launcher.py"
+    respawn="false" output="screen">
+  </node>
+
+</launch>
