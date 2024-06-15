@@ -1,0 +1,23 @@
+controller_list:
+  - name: fake_manipulator_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - shoulder_roll_joint
+      - shoulder_pitch_joint
+      - elbow_roll_joint
+      - elbow_pitch_joint
+      - elbow_yaw_joint
+      - wrist_pitch_joint
+      - wrist_roll_joint
+  - name: fake_gripper_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - gripper_finger1_joint
+initial:  # Define initial robot poses.
+  - group: manipulator
+    pose: manipulator_up
+    pose: object_pick
+    pose: object_move
+    pose: object_place
+  - group: gripper
+    pose: stand_up
